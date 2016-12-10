@@ -13,7 +13,7 @@ class OutputBin:
         return True
 
     def set_give_directive_targets(self, lowdest, highdest):
-        assert(False, "Output bins do not support give directives")
+        assert False, "Output bins do not support give directives"
 
     def can_perform_give_directive(self, bots_and_bins):
         return False
@@ -62,7 +62,7 @@ def ensure_bot_or_bin_exists(bots_and_bins, name):
         elif name.startswith('output'):
             bots_and_bins[name] = OutputBin(name)
         else:
-            assert(False, "Unknown kind of receiver object name")
+            assert False, "Unknown kind of receiver object name"
 
 
 
@@ -116,7 +116,7 @@ def create_bots_and_bins_from_directives(directives):
             done = directive_matcher(directive, bots_and_bins)
             if done:
                 break
-        assert(done, "Encountered a directive that didn't match any known directives")
+        assert done, "Encountered a directive that didn't match any known directives"
 
     return bots_and_bins
 
