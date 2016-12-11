@@ -246,6 +246,13 @@ def day11b_solver(corefunc = default_solver_corefunc):
     # The second floor contains a cobalt generator, a curium generator, a ruthenium generator, and a plutonium generator.
     # The third floor contains a cobalt-compatible microchip, a curium-compatible microchip, a ruthenium-compatible microchip, and a plutonium-compatible microchip.
     # The fourth floor contains nothing relevant.
+    #
+    # Upon entering the isolated containment area, however, you notice some extra parts on the first floor that weren't listed on the record outside:
+    # An elerium generator.
+    # An elerium-compatible microchip.
+    # A dilithium generator.
+    # A dilithium-compatible microchip.
+
     startstate = State([
                       {Generator('promethium'), Microchip('promethium'), Generator('elerium'), Microchip('elerium'), Generator('dilithium'), Microchip('dilithium')},
                       {Generator('cobalt'), Generator('curium'), Generator('ruthenium'), Generator('plutonium')},
